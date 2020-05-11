@@ -1,0 +1,61 @@
+public class lista de parques visitados {
+
+public park() {
+}
+
+@PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "parkId")
+    private int mId;
+    
+    @Nullable
+    @ColumnInfo(name = "parkName")
+    private String mName;
+    
+    public park(@Nullable String name, String location , int score, String creationDate) {
+        mName = name;
+        mLocation = Location;
+        mScore = score;
+        mCreationDate = creationDate;
+        
+        }
+        
+        public int getId() {
+          return mId; 
+       }
+       
+       public void setId(){
+         mId = Id; 
+      }
+      
+      public String getName(){
+        return mName;
+      }
+      
+      public void setName(String name){
+         mName = name;
+      }
+      
+      public String getLocation{
+        return mLocation;
+      }
+      
+      public void setLocation{
+        mLocation = Location;
+     }
+     
+     public int getScore(){
+       return mScore;
+    }
+    
+    public void setScore(){
+       mScore = score;
+   }
+   
+   public String setCreationDate() {
+      return mCreationDate;
+   }
+   
+   public void getCreationDate(){
+     mCreationDate = creationdate;
+   }
