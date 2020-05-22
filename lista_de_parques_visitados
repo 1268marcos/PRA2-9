@@ -1,7 +1,14 @@
-public class lista de parques visitados {
 
-public park() {
-}
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+
+@Entity(tableName = "parks")
+
+public class Park {
 
 @PrimaryKey(autoGenerate = true)
     @NonNull
@@ -12,9 +19,14 @@ public park() {
     @ColumnInfo(name = "parkName")
     private String mName;
     
-    public park(@Nullable String name, String location , int score, String creationDate) {
+       private String mLocation;
+    private int mScore;
+    private String mCreationDate;
+    
+    
+    public Park(@Nullable String name, String location , int score, String creationDate) {
         mName = name;
-        mLocation = Location;
+        mLocation = location;
         mScore = score;
         mCreationDate = creationDate;
         
@@ -24,9 +36,9 @@ public park() {
           return mId; 
        }
        
-       public void setId(){
-         mId = Id; 
-      }
+       public void setId(int id){
+        mId = id;
+    }
       
       public String getName(){
         return mName;
@@ -36,26 +48,27 @@ public park() {
          mName = name;
       }
       
-      public String getLocation{
+      public String getLocation(){
         return mLocation;
       }
       
-      public void setLocation{
-        mLocation = Location;
-     }
+        public void setLocation(String location){
+        mLocation = location;
+    }
      
      public int getScore(){
        return mScore;
     }
     
-    public void setScore(){
-       mScore = score;
-   }
+    public void setScore(int score){
+        mScore = score;
+    }
    
    public String setCreationDate() {
       return mCreationDate;
    }
    
-   public void getCreationDate(){
-     mCreationDate = creationdate;
-   }
+    public void getCreationDate(String creationdate){
+        mCreationDate = creationdate;
+    }
+}
